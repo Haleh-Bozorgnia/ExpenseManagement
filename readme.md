@@ -1,30 +1,47 @@
 # PROJECT 2
 
-- **Project Name:** jlkdjfljdflkjflsdfj
-- **Project By:** your name
-- [**LINK TO GITHUB**](http://www.github.com)
-- [**LINK TO DEPLOYED WEBSITE**](http://www.render.com)
+- **Project Name:**
+  Expenses Management App
+- **Project By:** Haleh Bozorgnia
+- [LINK TO GITHUB](https://github.com/Haleh-Bozorgnia/project2)
+- [LINK TO DEPLOYED WEBSITE](https://project2-wxqx.onrender.com)
 - **List of Technologies used:** HTML, JS, CSS, Node, Express, EJS, Mongo
-- [**LINK TO TRELLO**](http://www.render.com)
+- [LINK TO TRELLO](https://trello.com/invite/b/60G0vBB5/ATTIa762dac619c14e022b48cdb85d8e7eeaFABF3319/project-2)
 
 ## Description
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+This app enables users to effectively track and manage their expenses, providing them with tools to maintain a clear overview of their spending habits.
 
 ## Mock UP of UI
 
-- ![Desktop View](http://imgur.com)
-- ![Mobile View](http://imgur.com)
+- **Desktop View:**
+![Desktop View](https://i.imgur.com/GfzcdIF.png)
+- **Mobile View:**
+![Mobile View](https://i.imgur.com/uGHEJ4i.png)
 
 ## List of Backend Endpoints
 
-| ENDPOINT | METHOD | PURPOSE |
-|----------|--------|---------|
-| /dog | get | list all dogs |
-|/dog/:id | get | list one dog |
+| ENDPOINT | METHOD | PURPOSE       |
+| -------- | ------ | ------------- |
+| /expense     | GET    | List all expenses |
+| /expense/:id | GET    | Show one expense  |
+|/expense/new|	GET	|Display a form to add a new expense
+|/expense	|POST	|Add the expense to the database 
+|/expense/:id/edit	|GET	|To edit an existing expense  
+|/expense/:id	|PUT	|Update an expense's information 
+|/expense/:id	|DELETE	|Delete an expense 
+----------	--------	---------
+| ENDPOINT | METHOD | PURPOSE       |
+| -------- | ------ | ------------- |
+|/	|GET	|Display app name and buttons for Sign-Up and Login
+|/signup	|GET	|Display a form to new user to sign up 
+|/signup	|POST	|Add the new user info to the database 
+|/login	|GET	|Display a form that users can use to log into the app
+|/login	|POST	|Check the username and password to match data,then redirect to /expense
+|/logout	|GET	|Logout page 
+
 
 ## ERD (ENTITY RELATIONSHIP DIAGRAM)
 
-![PICTURE OF ERD](http://imgur.com)
-
+![PICTURE OF ERD](https://i.imgur.com/JR3rMcV.png)
 - [Free ERD Diagram Tool](https://dbdiagram.io/home)
