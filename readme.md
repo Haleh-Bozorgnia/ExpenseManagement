@@ -14,9 +14,9 @@ This app enables users to effectively track and manage their expenses, providing
 
 ## Mock UP of UI
 
-- **Desktop View:**
+### Desktop View:
 ![Desktop View](https://i.imgur.com/GfzcdIF.png)
-- **Mobile View:**
+### Mobile View:
 ![Mobile View](https://i.imgur.com/uGHEJ4i.png)
 
 ## List of Backend Endpoints
@@ -39,7 +39,6 @@ This app enables users to effectively track and manage their expenses, providing
 |/login	|GET	|Display a form that users can use to log into the app
 |/login	|POST	|Check the username and password to match data,then redirect to /expense
 |/logout	|GET	|Logout page 
-
 
 ## ERD (ENTITY RELATIONSHIP DIAGRAM)
 
