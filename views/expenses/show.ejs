@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h2>Title: <%=expense.title %></h2>
+        <h3>Ctegory: <%=expense.category %></h3>
+        <h3>Amount: <%=expense.amount %></h3>
+        <h3>Date: <%=expense.date %></h3>
+        <h3>Receipt Image: <img src="<%= expense.receipt %>" alt="Receipt Image"></h3>
+        <h3>image <%= expense.receipt %></h3>
+
+        <h3>Description: <%=expense.description %></h3>
+
+        <form action="/expense/<%=expense._id%>?_method=DELETE" method="Post">
+            <input type="submit" value="delete" />
+        </form>
+        <a href="/expense/index"><button>Back To Main</button></a>
+        <a href="/expense/<%= expense._id %>/edit"><button> Edit</button></a>
+
+    </main>
+</body>
+</html>

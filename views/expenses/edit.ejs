@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+       <form action="/expense/<%=expense._id%>?_method=PUT" method="post">
+        <label>Title: <input type="text" name="title" value="<%=expense.title %>" placeholder="enter title"/></label>
+        <label>Ctegory: <input type="text" name="category" value="<%=expense.category%>" placeholder="enter title"/></label>
+        <label>Amount: <input type="number" name="amount" value="<%=expense.amount%>" placeholder="enter amount"/></label>
+        <label>Date: <input type="date" name="date" value="<%=expense.date%>"/></label>
+        <label>Receipt Image: <input type="file" name="receipt" value="<%=expense.receipt%>" placeholder="attach receipt image" /></label>
+        <label>Description: <input type="description" name="description" value="<%=expense.description %>" placeholder="enter description"/></label>
+        <input type="submit" value="Edit" />
+        </form>
+    </main>
+</body>
+</html>
