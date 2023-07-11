@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('./partials/head.ejs')%>
 <body>
+     
     <main>
-                <div>
-                    <a href="/user/signup"><button>Sign Up</button></a>
-                    <a href="/user/login"><button>Login</button></a>
-                </div>
+        <div class="container">
+            <div>
+                <img src="/images/ex.png">
+                <p>Receipt Management</p>
+            </div>
+            <div>
+                <a  href="/user/signup"><button class="btn-log">Sign Up</button></a>
+                <a  href="/user/login"><button class="btn-log">Login</button></a>
+            </div>
+        </div>
     </main>
 </body>
 </html>

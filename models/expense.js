@@ -9,6 +9,7 @@ const expensesSchema = new Schema({
   receipt: String,
   description: String,
   username: String,
+  imageUrl: String,
 });
 const Expense = model ('Expense', expensesSchema)
 module.exports = Expense

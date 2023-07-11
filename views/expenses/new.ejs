@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/head.ejs')%>
 <body>
-    <header>
-
+    <header class="img-container">
+            <img src="/images/index.png">
     </header>
+    <div class="btn-container">
+            <a href="/expense"><button class="btn-log">Home</button></a>
+            <a href="/user/logout"><button class="btn-log">Logout</button></a>
+    </div>
     <main>
-        <form action="/expense" method="post">
-        <label>Title: <input type="text" name="title" placeholder="enter title"/></label>
-        <label>Ctegory: <input type="text" name="category" placeholder="enter title"/></label>
-        <label>Amount: <input type="number" name="amount" placeholder="enter amount"/></label>
-        <label>Date: <input type="date" name="date" /></label>
-        <label>Receipt Image: <input type="file" name="receipt" placeholder="attach receipt image" /></label>
-        <label>Description: <input type="description" name="description" placeholder="enter description"/></label>
-        <input type="submit" value="Create" />
-        </form>
-        <a href="#"><button>Back To Main</button></a>
+        <div class="new-body-container">
+            <form action="/expense" method="post">
+                <label>Title: <input type="text" name="title" placeholder="enter title"/></label>
+                <label>Ctegory: <input type="text" name="category" placeholder="enter title"/></label>
+                <label>Amount: <input type="number" name="amount" placeholder="enter amount"/></label>
+                <label>Date: <input type="date" name="date" /></label>
+                <label>Description: <input type="text" name="description" placeholder="enter description"/></label>
+                <label>Receipt Image: <input type="file" name="receipt" placeholder="attach receipt image" /></label>
+                <input class="btn-log" type="submit" value="Create" />
+            </form>
+        </div>
 
     </main>
 </body>

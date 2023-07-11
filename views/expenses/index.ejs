@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/head.ejs')%>
 <body>
-    <header>
-        <h1>Show</h1>
-
+    <header class="img-container">
+            <img src="/images/index.png">
     </header>
     <main>
-
+        <div class="body-container">
         <% for (expense of expenses){%>
             <article>
                 <a href="/expense/<%=expense._id%>">
-                    <h2> Title : <%= expense.title%></h2>
+                    <h2> Expense Title : <%= expense.title%></h2>
+                    <hr>
                 </a>
                 <!-- <h3>Receipt Image: <img src="<%= expense.receipt %>" alt="Receipt Image"></h3>
                 <h3>image <%= expense.receipt %></h3> -->
-
             </article>
         <%}%>
-        <a href="/expense/new">New Expense</a>
-        <a href="/user/logout"><button>Logout</button></a>
+       
+        </div>
+        <div class="btn-container">
+            <a href="/expense/new"><button class="btn-log">New Expense</button></a>
+            <a href="/user/logout"><button class="btn-log">Logout</button></a>
+        </div>
+       
     </main>
 </body>
 </html>
