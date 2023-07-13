@@ -6,24 +6,28 @@
             <img src="/images/index.png">
     </header>
     <main>
-        <div class="body-container">
-        <% for (expense of expenses){%>
-            <article>
-                <a href="/expense/<%=expense._id%>">
-                    <h2> Expense Title : <%= expense.title%></h2>
-                    <hr>
-                </a>
-                <!-- <h3>Receipt Image: <img src="<%= expense.receipt %>" alt="Receipt Image"></h3>
-                <h3>image <%= expense.receipt %></h3> -->
-            </article>
-        <%}%>
-       
-        </div>
-        <div class="btn-container">
+         <div class="btn-container">
             <a href="/expense/new"><button class="btn-log">New Expense</button></a>
             <a href="/user/logout"><button class="btn-log">Logout</button></a>
+            <a href="/expense/search"><button class="btn-log">Search</button></a>
         </div>
-       
+
+        <div >
+        <% for (expense of expenses){%>
+            <article class="index-body-container">
+                <div>
+                    <a href="/expense/<%=expense._id%>">
+                        <h3><span>Expense Title:</span>  <%= expense.title%></h3>
+                    </a>
+                    <h4><span>Date:</span> <%= expense.date%> </h4>
+                    <h4><span>Total Price:</span> $ <%= expense.amount%></h4>
+                    <h4><span>Category:</span><%= expense.category%></h4>
+                </div>
+                <img class="img-receipt" src="<%= expense.receipt %>" alt="Receipt Image">
+            </article>
+             <hr>
+        <%}%>
+        </div>
     </main>
 </body>
 </html>

@@ -43,7 +43,7 @@ fieldset{
     height: 60px;
     width: 200px;
     background-color: rgb(170, 28, 163);
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -54,19 +54,19 @@ fieldset{
       align-items: center;
 }
 
-.body-container{
+.index-body-container{
     display: flex;
-    /* justify-content: left; */
     align-items: left;
     border: solid rgb(175, 21, 175) 5px;
-    flex-direction: column;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+    flex-direction:row;
+    justify-content: space-around;
     padding: 30px;
     margin: auto;
     width: 90%;
+}
+h4{
+    color:rgb(175, 21, 175) 5px;
+    font-style: bold;
 }
 .btn-container{
     display: flex;
@@ -77,15 +77,84 @@ fieldset{
 }
 .new-body-container{
     display: flex;
-    /* justify-content: left; */
     align-items: center;
     border: solid rgb(175, 21, 175) 5px;
     flex-direction: column;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     padding: 30px;
     margin: auto;
     width: 60%;
 }
+.img-receipt{
+    width: 25rem;
+    height: 25rem;
+    border: solid 5px rgb(223, 125, 223);
+    margin:2px;
+    transition: transform 0.3s ease;
+    margin-left: 20rem;
+
+}
+
+.show-body-container{
+    display: flex;
+    align-items: left;
+    border: solid rgb(175, 21, 175) 5px;
+    flex-direction: column;
+    padding: 30px;
+    margin: auto;
+    width: 50%;
+}
+.show-img-container{
+    display: flex;
+    /* justify-content:  */
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.edit-img-container{
+     display: flex;
+    /* justify-content:  */
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    border: solid rgb(175, 21, 175) 5px;
+    padding: 30px;
+    margin: auto;
+    width: 50%;
+}
+
+.drop-edit {
+   
+    width: 90%;
+    margin-left: 15px;
+}
+
+
+
+
+h3{
+    color: rgb(175, 21, 175);
+}
+h4,h3{
+        transition: transform 0.3s ease;
+
+}
+h4:hover, h3:hover, .img-receipt:hover {
+    transform: scale(1.1);
+  }
+  span{
+      color: rgb(175, 21, 175);
+      font-weight: bold;
+  }
+  .show-btn-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+  }
+  .show-body-container h4{
+      margin-left: 50px;
+      /* padding-left: 50px; */
+  }
+  .edit-frm-edit{
+      margin-left: 120px;
+  }

@@ -13,15 +13,21 @@
         <div class="new-body-container">
             <form action="/expense" method="post">
                 <label>Title: <input type="text" name="title" placeholder="enter title"/></label>
-                <label>Ctegory: <input type="text" name="category" placeholder="enter title"/></label>
-                <label>Amount: <input type="number" name="amount" placeholder="enter amount"/></label>
+                 <label>Category:
+                     <select name="category">
+                        <option value="">Select a category</option>
+                        <option value="Food" <%= expense.category === 'Food' ? 'selected' : '' %>>Food</option>
+                        <option value="Utilities" <%= expense.category === 'Utilities' ? 'selected' : '' %>>Utilities</option>
+                        <option value="Insurance" <%= expense.category === 'Insurance' ? 'selected' : '' %>>Insurance</option>
+                     </select>
+                 </label>
+                <label>Amount: <input type="number" step="any" name="amount" placeholder="enter amount"/></label>
                 <label>Date: <input type="date" name="date" /></label>
                 <label>Description: <input type="text" name="description" placeholder="enter description"/></label>
-                <label>Receipt Image: <input type="file" name="receipt" placeholder="attach receipt image" /></label>
+                <label>Receipt Image: <input type="text" name="receipt" placeholder="receipt image" /></label>
                 <input class="btn-log" type="submit" value="Create" />
             </form>
         </div>
-
     </main>
 </body>
 </html>

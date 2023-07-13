@@ -3,23 +3,32 @@
 <%- include('../partials/head.ejs')%>
 <body>
     <header>
+         <header class="img-container">
+            <img src="/images/index.png">
+    </header>
     </header>
     <main>
-        <h2>Title: <%=expense.title %></h2>
-        <h3>Ctegory: <%=expense.category %></h3>
-        <h3>Amount: <%=expense.amount %></h3>
-        <h3>Date: <%=expense.date %></h3>
-        <h3>Receipt Image: <img src="<%= expense.receipt %>" alt="Receipt Image"></h3>
-        <h3>image <%= expense.receipt %></h3>
-
-        <h3>Description: <%=expense.description %></h3>
-
-        <form action="/expense/<%=expense._id%>?_method=DELETE" method="Post">
-            <input type="submit" value="delete" />
-        </form>
-        <a href="/expense/index"><button>Back To Main</button></a>
-        <a href="/expense/<%= expense._id %>/edit"><button> Edit</button></a>
-
+        <div class="show-body-container">
+                <div class="show-btn-container">
+                    <a href="/expense"><button class="btn-log">Back To Main</button></a>
+                    <a href="/expense/<%= expense._id %>/edit"><button class="btn-log"> Edit</button></a>
+                </div>
+                <hr>
+                <div class="show-img-container">
+                    <h4><span>Title:</span> <%=expense.title %></h4>
+                    <img class="img-receipt" src="<%= expense.receipt %>" alt="Receipt Image">
+                </div>
+                <div>
+                    <h4><span>Ctegory:</span> <%=expense.category %></h34>
+                    <h4><span>Amount:</span> <%=expense.amount %></h4>
+                    <h4><span>Date:</span> <%=expense.date %></h4>
+                    <h4><span>Description:</span> <%=expense.description %></h4>
+                    <hr>
+                    <form class='show-frm-delete' action="/expense/<%=expense._id%>?_method=DELETE" method="Post">
+                        <input  type="submit" value="delete" />
+                    </form>
+                </div>
+        </div>
     </main>
 </body>
 </html>
