@@ -33,18 +33,6 @@ HTML, CSS, JS, Node,EJS, Express, Mongo
 
 #### Desktop View
 ![Desktop View](https://i.imgur.com/GfzcdIF.png)
-![Desktop View](https://i.imgur.com/D2DGMT1.png)
-### Mobile View
-![Mobile View1](https://i.imgur.com/uGHEJ4i.png)
-
-
-
-![Mobile View3](https://i.imgur.com/70LWJRs.png)
-
-![Mobile View3](https://i.imgur.com/dw0q18y.png)
-
-![Mobile View3](https://i.imgur.com/2NyzRBc.png)
-
 
 
 ---
