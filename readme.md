@@ -17,9 +17,9 @@ The information fields that the App stores include the following:
 By clicking on a category,the User can see all the records that have the same category on one page.
 
 ---
-###Links
+### Links
 - [LINK TO GITHUB](https://github.com/Haleh-Bozorgnia/project2)
-- [LINK TO DEPLOYED WEBSITE](https://project2-wxqx.onrender.com)
+- [LINK TO DEPLOYED WEBSITE](https://expensesmanagement.onrender.com)
 
 - [LINK TO TRELLO](https://trello.com/invite/b/60G0vBB5/ATTIa762dac619c14e022b48cdb85d8e7eeaFABF3319/project-2)
 
@@ -63,5 +63,4 @@ HTML, CSS, JS, Node,EJS, Express, Mongo
 
 ### ERD (ENTITY RELATIONSHIP DIAGRAM)
 
-![PICTURE OF ERD](https://i.imgur.com/JR3rMcV.png)
-- [Free ERD Diagram Tool](https://dbdiagram.io/home)
+![PICTURE OF ERD](https://i.imgur.com/5ZLX41Z.png)
