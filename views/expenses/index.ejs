@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head.ejs')%>
-<body>
+  <%- include('../partials/head.ejs')%>
+  <body>
     <header class="img-container">
-            <img src="/images/index.png">
+      <img src="/images/index.png" />
     </header>
     <main>
-         <div class="btn-container">
-            <a href="/expense/new"><button class="btn-log">New Expense</button></a>
-            <a href="/user/logout"><button class="btn-log">Logout</button></a>
-            <a href="/expense/search"><button class="btn-log">Search</button></a>
-        </div>
+      <div class="btn-container">
+        <a href="/expense/new"><button class="btn-log">New </button></a>
+        <a href="/user/logout"><button class="btn-log">Logout</button></a>
+      </div>
 
-        <div >
+      <div class="index-result">
         <% for (expense of expenses){%>
-            <article class="index-body-container">
-                <div>
-                    <a href="/expense/<%=expense._id%>">
-                        <h3><span>Expense Title:</span>  <%= expense.title%></h3>
-                    </a>
-                    <h4><span>Date:</span> <%= expense.date%> </h4>
-                    <h4><span>Total Price:</span> $ <%= expense.amount%></h4>
-                    <h4><span>Category:</span><%= expense.category%></h4>
-                </div>
-                <img class="img-receipt" src="<%= expense.receipt %>" alt="Receipt Image">
-            </article>
-             <hr>
+        <article class="index-body-container">
+          <div>
+            <a href="/expense/<%=expense._id%>">
+              <h4><span>Expense Title:</span> <%= expense.title%></h4>
+            </a>
+            <!-- ===SEARCH FOR CATEGORY=== -->
+            <a href="/expense/category/<%=expense.category%>">
+              <h4><span>Expense Category:</span> <%= expense.category%></h4>
+            </a>
+            <!-- ======== -->
+            <h4><span>Date:</span> <%= expense.date%></h4>
+            <h4><span>Total Price:</span> $ <%= expense.amount%></h4>
+          </div>
+          <img
+            class="img-receipt"
+            src="<%= expense.receipt %>"
+            alt="Receipt Image"
+          />
+        </article>
+        <hr />
         <%}%>
-        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

@@ -10,17 +10,20 @@
     <main>
         <div class="show-body-container">
                 <div class="show-btn-container">
-                    <a href="/expense"><button class="btn-log">Back To Main</button></a>
+                    <a href="/expense"><button class="btn-log"> Main</button></a>
                     <a href="/expense/<%= expense._id %>/edit"><button class="btn-log"> Edit</button></a>
                 </div>
                 <hr>
                 <div class="show-img-container">
                     <h4><span>Title:</span> <%=expense.title %></h4>
-                    <img class="img-receipt" src="<%= expense.receipt %>" alt="Receipt Image">
+                    <div class="show-image-receip">
+                        <img class="img-receipt" src="<%= expense.receipt %>" alt="Receipt Image">
+                    </div>
+                   
                 </div>
                 <div>
                     <h4><span>Ctegory:</span> <%=expense.category %></h34>
-                    <h4><span>Amount:</span> <%=expense.amount %></h4>
+                    <h4><span>Price:</span>$ <%=expense.amount %></h4>
                     <h4><span>Date:</span> <%=expense.date %></h4>
                     <h4><span>Description:</span> <%=expense.description %></h4>
                     <hr>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')%>
+<body>
+    <header class="img-container">
+            <img src="/images/index.png">
+    </header>
+     <main>
+          <div class="btn-container">
+            <a href="/expense"><button class="btn-log">Home</button></a>
+            <a href="/user/logout"><button class="btn-log">Logout</button></a>
+          </div>
+          <p>Category Results</p>>
+          <div>
+            <%expenses.forEach((expense) => { %>
+              <article class="search-body-container">
+                <div>
+                  <h4><span>Category:</span> <%= expense.category %></h4>
+                  <h4><span>Title:</span><%= expense.title %></h4>
+                  <h4><span>Price:</span>$<%= expense.amount %></h4>
+                  <h4><span>Date:</span> <%= expense.date %></h4>
+                </div>
+              </article>
+              <hr>
+            <% }) %>
+          </div>
+      </main>
+</body>
+</html>

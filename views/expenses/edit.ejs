@@ -6,18 +6,25 @@
 
     </header>
     <main>
-        <div class="edit-img-container">
+        <div class="edit-body-container">
             <form action="/expense/<%=expense._id%>?_method=PUT" method="post">
                     <label>Title: <input type="text" name="title" value="<%=expense.title %>" placeholder="enter title"/></label>
                     <!-- <label>Ctegory: <input type="text" name="category" value="<%=expense.category%>" placeholder="enter title"/></label> -->
                     <label>Category:</label>
-                        <select class='drop-edit' name="category">
-                            <option value="Food" <%= expense.category === 'Food' ? 'selected' : '' %>>Food</option>
-                            <option value="Utilities" <%= expense.category === 'Utilities' ? 'selected' : '' %>>Utilities</option>
-                            <option value="Insurance" <%= expense.category === 'Insurance' ? 'selected' : '' %>>Insurance</option>
-                        </select>
-                    
-                    <label>Amount: $<input type="number" step="any" name="amount"   value="<%=expense.amount%>" placeholder="enter amount"/></label>
+                        <select class="drop-edit" name="category" required>
+                            <option><%=expense.category%></option>
+                            <option value="Housing" <%= expense.category === 'Housing' ? 'selected="selected"' : '' %>>Housing</option>
+                            <option value="Transportation" <%= expense.category === 'Transportation' ? 'selected="selected"' : '' %>>Transportation</option>
+                            <option value="Food" <%= expense.category === 'Food' ? 'selected="selected"' : '' %>>Food</option>
+                            <option value="Utilities" <%= expense.category === 'Utilities' ? 'selected="selected"' : '' %>>Utilities</option>
+                            <option value="Insurance" <%= expense.category === 'Insurance' ? 'selected="selected"' : '' %>>Insurance</option>
+                            <option value="Medical & Healthcare" <%= expense.category === 'Medical & Healthcare' ? 'selected="selected"' : '' %>>Medical & Healthcare</option>
+                            <option value="Saving, Investing, & Debt Payments " <%= expense.category === 'Saving, Investing, & Debt Payments ' ? 'selected="selected"' : '' %>>Saving, Investing, & Debt Payments </option>
+                            <option value="Personal Spending" <%= expense.category === 'Personal Spending' ? 'selected="selected"' : '' %>>Personal Spending</option>
+                            <option value="Entertainment" <%= expense.category === 'Entertainment' ? 'selected="selected"' : '' %>>Entertainment</option>
+                            <option value="Miscellaneous" <%= expense.category === 'Miscellaneous' ? 'selected="selected"' : '' %>>Miscellaneous</option>         
+                     </select>      
+                    <label>Price: $<input type="number" step="any" name="amount"   value="<%=expense.amount%>" placeholder="enter amount"/></label>
                     <label>Date: <input type="date" name="date" value="<%=expense.date%>"/></label>
                     <label>Receipt Image: <input type="text" name="receipt" value="<%=expense.receipt%>" placeholder="attach receipt image" /></label>
                     <label>Description: <input type="text" name="description" value="<%=expense.description %>" placeholder="enter description"/></label>

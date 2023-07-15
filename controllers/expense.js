@@ -58,6 +58,15 @@ router.get('/:id/edit', async(req,res)=>{
     const expense = await Expense.findById(id)
     res.render('expenses/edit.ejs',{expense})
 })
+
+
+// Route handler for rendering the search results
+router.get('/category/:category', async (req,res) => {
+    const category = req.params.category;
+    const expenses = await Expense.find({category});
+    res.render("expenses/search.ejs", { expenses });
+});
+
 //Show Router
 router.get('/:id', async(req,res)=>{
     const id = req.params.id
@@ -65,6 +74,8 @@ router.get('/:id', async(req,res)=>{
     res.render('expenses/show.ejs',{expense})
 
 })
+// ========
+
 
 
 module.exports = router

@@ -14,14 +14,21 @@
             <form action="/expense" method="post">
                 <label>Title: <input type="text" name="title" placeholder="enter title"/></label>
                  <label>Category:
-                     <select name="category">
-                        <option value="">Select a category</option>
+                     <select name="category" required>
+                        <option value="">select a category</option>
+                        <option value="Housing" <%= expense.category === 'Housing' ? 'selected' : '' %>>Housing</option>
+                        <option value="Transportation" <%= expense.category === 'Transportation' ? 'selected' : '' %>>Transportation</option>
                         <option value="Food" <%= expense.category === 'Food' ? 'selected' : '' %>>Food</option>
                         <option value="Utilities" <%= expense.category === 'Utilities' ? 'selected' : '' %>>Utilities</option>
                         <option value="Insurance" <%= expense.category === 'Insurance' ? 'selected' : '' %>>Insurance</option>
+                        <option value="Medical & Healthcare" <%= expense.category === 'Medical & Healthcare' ? 'selected' : '' %>>Medical & Healthcare</option>
+                        <option value="Saving, Investing, & Debt Payments " <%= expense.category === 'Saving, Investing, & Debt Payments ' ? 'selected' : '' %>>Saving, Investing, & Debt Payments </option>
+                        <option value="Personal Spending" <%= expense.category === 'Personal Spending' ? 'selected' : '' %>>Personal Spending</option>
+                        <option value="Entertainment" <%= expense.category === 'Entertainment' ? 'selected' : '' %>>Entertainment</option>
+                        <option value="Miscellaneous" <%= expense.category === 'Miscellaneous' ? 'selected' : '' %>>Miscellaneous</option>         
                      </select>
                  </label>
-                <label>Amount: <input type="number" step="any" name="amount" placeholder="enter amount"/></label>
+                <label>Price:$ <input type="number" step="any" name="amount" placeholder="enter amount"/></label>
                 <label>Date: <input type="date" name="date" /></label>
                 <label>Description: <input type="text" name="description" placeholder="enter description"/></label>
                 <label>Receipt Image: <input type="text" name="receipt" placeholder="receipt image" /></label>
