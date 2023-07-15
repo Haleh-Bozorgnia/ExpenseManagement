@@ -13,6 +13,7 @@ The information fields that the App stores include the following:
 - Date
 - Price
 - Image
+- Description
 
 By clicking on a category,the User can see all the records that have the same category on one page.
 
