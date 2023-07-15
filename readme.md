@@ -24,12 +24,12 @@ By clicking on a category,the User can see all the records that have the same ca
 - [LINK TO TRELLO](https://trello.com/invite/b/60G0vBB5/ATTIa762dac619c14e022b48cdb85d8e7eeaFABF3319/project-2)
 
 ---
-###Technologies  
+### Technologies  
 HTML, CSS, JS, Node,EJS, Express, Mongo
 
 ---
 
-###UI Mockup
+### UI Mockup
 
 #### Desktop View
 ![Desktop View](https://i.imgur.com/GfzcdIF.png)
@@ -37,7 +37,7 @@ HTML, CSS, JS, Node,EJS, Express, Mongo
 ![Mobile View](https://i.imgur.com/uGHEJ4i.png)
 
 ---
-###Backend Endpoints
+### Backend Endpoints
 
 |Name | ENDPOINT | METHOD | PURPOSE       |
 |-----| -------- | ------ | ------------- |
