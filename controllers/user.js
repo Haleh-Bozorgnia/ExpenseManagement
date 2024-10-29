@@ -1,7 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../models/user");
-const { route } = require("./expense");
 
 const router = express.Router();
 
@@ -34,6 +33,8 @@ router.post("/login", async (req, res) => {
   //case where the username entered does not exist in the DB
   if (!user) {
     res.send("user doesnt exist");
+    
+  
   } else {
     //compare the password that was entered on the Form (req.body.password)
     //to the password that is save in the DB
@@ -57,5 +58,4 @@ router.get("/logout", (req, res) => {
     res.redirect("/");
   });
 });
-
 module.exports = router;

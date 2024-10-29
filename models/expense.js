@@ -1,4 +1,4 @@
-const mongoose = require ('./connection.js')
+const mongoose = require ('./connection')
 const { Schema, model } = mongoose;
 
 const expensesSchema = new Schema({
@@ -14,5 +14,5 @@ const expensesSchema = new Schema({
   username: String,
  
 });
-const Expense = model ('Expense', expensesSchema)
+const Expense = model("expense", expensesSchema);
 module.exports = Expense
